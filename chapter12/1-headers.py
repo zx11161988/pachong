@@ -8,4 +8,5 @@ url = "https://cd.lianjia.com/chengjiao/c3011056131816/?sug=滨河花园"
 req = session.get(url, headers=headers)
 #print(req.text)
 bsObj = BeautifulSoup(req.text, "html.parser")
+print(bsObj.findAll("div", class_="info"))
 print(bsObj.find("div", class_="page-box house-lst-page-box").attrs["page-data"])
